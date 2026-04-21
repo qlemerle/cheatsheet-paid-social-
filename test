@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cheatsheet Paid Social - Spécifications Techniques</title>
+    <style>
+        :root {
+            --primary-color: #2563eb;
+            --bg-color: #f8fafc;
+            --text-color: #1e293b;
+            --border-color: #e2e8f0;
+        }
+
+        body {
+            font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-color);
+            margin: 0;
+            padding: 40px 20px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-bottom: 10px;
+            color: #0f172a;
+        }
+
+        .subtitle {
+            text-align: center;
+            margin-bottom: 30px;
+            color: #64748b;
+        }
+
+        /* Tabs CSS */
+        .tab {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-radius: 8px 8px 0 0;
+            overflow: hidden;
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+
+        .tab button {
+            background-color: inherit;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            padding: 14px 24px;
+            transition: 0.3s;
+            font-size: 16px;
+            font-weight: 600;
+            color: #475569;
+            border-bottom: 3px solid transparent;
+        }
+
+        .tab button:hover {
+            background-color: #f1f5f9;
+        }
+
+        .tab button.active {
+            color: var(--primary-color);
+            border-bottom: 3px solid var(--primary-color);
+            background-color: #fff;
+        }
+
+        /* Tab Content CSS */
+        .tabcontent {
+            display: none;
+            padding: 30px;
+            background-color: #fff;
+            border: 1px solid var(--border-color);
+            border-top: none;
+            border-radius: 0 0 8px 8px;
+            max-width: 1200px;
+            margin: 0 auto;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+            animation: fadeEffect 0.5s;
+        }
+
+        @keyframes fadeEffect {
+            from {opacity: 0;}
+            to {opacity: 1;}
+        }
+
+        /* Tables CSS */
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+
+        th, td {
+            text-align: left;
+            padding: 12px 15px;
+            border-bottom: 1px solid var(--border-color);
+        }
+
+        th {
+            background-color: #f8fafc;
+            font-weight: 600;
+            color: #334155;
+        }
+
+        tr:hover {
+            background-color: #f1f5f9;
+        }
+
+        .expert-tip {
+            background-color: #eff6ff;
+            border-left: 4px solid var(--primary-color);
+            padding: 15px;
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>CheatSheet Media Buyer 2026</h1>
+    <div class="subtitle">Spécifications techniques par plateforme sociale</div>
+
+    <div class="tab">
+        <button class="tablinks" onclick="openPlatform(event, 'Meta')" id="defaultOpen">META</button>
+        <button class="tablinks" onclick="openPlatform(event, 'TikTok')">TikTok</button>
+        <button class="tablinks" onclick="openPlatform(event, 'Snap')">Snapchat</button>
+        <button class="tablinks" onclick="openPlatform(event, 'Pinterest')">Pinterest</button>
+        <button class="tablinks" onclick="openPlatform(event, 'LinkedIn')">LinkedIn</button>
+        <button class="tablinks" onclick="openPlatform(event, 'Reddit')">Reddit</button>
+        <button class="tablinks" onclick="openPlatform(event, 'X')">X</button>
+        <button class="tablinks" onclick="openPlatform(event, 'BeReal')">BeReal</button>
+    </div>
+
+    <div id="Meta" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> Pensez "Mobile First". Le format 4:5 (1080x1350) occupe plus d'espace sur le feed Instagram/Facebook que le format carré. Pour les Reels, gardez les zones de sécurité (safe zones) libres en bas et à droite pour éviter que les UI de l'app ne cachent votre message.</div>
+        <table>
+            <tr><th>Placement / Format</th><th>Ratio</th><th>Résolution (px)</th><th>Poids Max</th><th>Texte & Limites</th></tr>
+            <tr><td>Feed Image (Carré)</td><td>1:1</td><td>1080 x 1080</td><td>30 MB</td><td>Texte principal : 125 car. | Titre : 27 car.</td></tr>
+            <tr><td>Feed Image (Vertical)</td><td>4:5</td><td>1080 x 1350</td><td>30 MB</td><td>Texte principal : 125 car. | Titre : 27 car.</td></tr>
+            <tr><td>Feed Vidéo</td><td>1:1 ou 4:5</td><td>1080 x 1080 (min)</td><td>4 GB</td><td>Durée : 1 sec à 240 min (15s reco) | MP4/MOV</td></tr>
+            <tr><td>Stories & Reels</td><td>9:16</td><td>1080 x 1920</td><td>4 GB (vidéo) / 30 MB (img)</td><td>Durée Reels : jusqu'à 15 min (mais visez < 30s)</td></tr>
+            <tr><td>Carrousel</td><td>1:1</td><td>1080 x 1080</td><td>30 MB / carte</td><td>2 à 10 cartes. Titre : 32 car.</td></tr>
+        </table>
+    </div>
+
+    <div id="TikTok" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> "Make TikToks, not ads." Sur TikTok, le contenu UGC ou natif performe infiniment mieux que les publicités léchées. Activez le son, c'est obligatoire !</div>
+        <table>
+            <tr><th>Format Ads</th><th>Ratio</th><th>Résolution (px)</th><th>Poids & Format</th><th>Durée & Textes</th></tr>
+            <tr><td>In-Feed Video</td><td>9:16 (reco), 1:1, 16:9</td><td>1080 x 1920</td><td>Max 500 MB (MP4, MOV, MPEG)</td><td>Jusqu'à 60s (9-15s fortement reco). Description : 1 à 100 caractères.</td></tr>
+            <tr><td>Spark Ads</td><td>9:16</td><td>Format organique</td><td>Idem organique</td><td>Post boosté : la caption n'est pas limitée comme en dark post.</td></tr>
+            <tr><td>Image Ads (Global App Bundle)</td><td>1:1 ou 16:9</td><td>1200 x 1200 / 1200 x 628</td><td>Max 100 KB (JPG, PNG, JPEG)</td><td>Nom de l'app/marque : 4-40 car. | Texte : 12-100 car.</td></tr>
+        </table>
+    </div>
+
+    <div id="Snap" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> L'attention sur Snap est volatile (les 2 premières secondes sont cruciales). Gardez le message ultra-court et utilisez un CTA clair au bas de l'écran ("Swipe up" mentalité).</div>
+        <table>
+            <tr><th>Format Ads</th><th>Ratio</th><th>Résolution (px)</th><th>Poids Max</th><th>Spécificités</th></tr>
+            <tr><td>Single Image or Video Ad</td><td>9:16</td><td>1080 x 1920</td><td>Vidéo: 1 GB | Image: 5 MB</td><td>Durée : 3 sec à 3 min. (3-5s reco). Nom marque : 25 car. | Titre : 34 car.</td></tr>
+            <tr><td>Story Ad</td><td>9:16</td><td>1080 x 1920</td><td>1 GB par tile</td><td>Tile (tuile Discover) : 360 x 600 px (Logo : 993 x 284 px).</td></tr>
+            <tr><td>Collection Ad</td><td>9:16</td><td>1080 x 1920</td><td>Idem Single Ad</td><td>Nécessite 4 images miniatures produits en bas (carrées).</td></tr>
+        </table>
+    </div>
+
+    <div id="Pinterest" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> Pinterest est un moteur de recherche visuel. Prévoyez vos campagnes avec de l'avance (les cycles de considération sont longs) et intégrez du texte directement sur l'image pour un meilleur CTR.</div>
+        <table>
+            <tr><th>Format Ads</th><th>Ratio</th><th>Résolution (px)</th><th>Poids & Format</th><th>Textes</th></tr>
+            <tr><td>Pin Standard (Image)</td><td>2:3 (reco)</td><td>1000 x 1500</td><td>Max 32 MB (PNG, JPG)</td><td>Titre : jusqu'à 100 car. | Description : jusqu'à 500 car.</td></tr>
+            <tr><td>Pin Vidéo Standard</td><td>1:1, 2:3, 9:16</td><td>Idem</td><td>Max 2 GB (MP4, MOV, M4V)</td><td>Durée : 4 sec à 15 min (6-15s reco).</td></tr>
+            <tr><td>Pin Vidéo Max Width</td><td>16:9 ou 1:1</td><td>1920 x 1080 / 1080x1080</td><td>Max 2 GB</td><td>Prend toute la largeur du feed sur mobile.</td></tr>
+            <tr><td>Pin Carrousel</td><td>1:1 ou 2:3</td><td>1000 x 1000 / 1000 x 1500</td><td>Max 32 MB par image</td><td>2 à 5 cartes.</td></tr>
+        </table>
+    </div>
+
+    <div id="LinkedIn" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> B2B oblige, LinkedIn est cher au CPC/CPM. Privilégiez les Lead Gen Forms pour réduire la friction et maximiser votre taux de conversion.</div>
+        <table>
+            <tr><th>Format Ads</th><th>Ratio</th><th>Résolution (px)</th><th>Poids Max</th><th>Textes</th></tr>
+            <tr><td>Single Image Ad</td><td>1.91:1 / 1:1 / 4:5</td><td>1200 x 628 / 1080 x 1080</td><td>5 MB (JPG, PNG)</td><td>Texte intro : 150 car. | Titre : 70 car. | Description : 100 car.</td></tr>
+            <tr><td>Video Ad</td><td>16:9 / 1:1 / 9:16</td><td>1920x1080 / 1080x1080 / 1080x1920</td><td>200 MB</td><td>Durée : 3 sec à 30 min (reco < 15s). Intro : 150 car.</td></tr>
+            <tr><td>Document Ad</td><td>Vertical / Horiz.</td><td>PDF, DOCX, PPTX</td><td>100 MB / 300 pages max</td><td>Parfait pour distribuer des Livres Blancs.</td></tr>
+        </table>
+    </div>
+
+    <div id="Reddit" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> Les Redditors détestent le marketing agressif. Utilisez un ton conversationnel, désactivez les commentaires si vous ne pouvez pas les modérer, ou laissez-les ouverts si vous avez une équipe Community Management audacieuse (meilleure option).</div>
+        <table>
+            <tr><th>Format Ads</th><th>Ratio</th><th>Résolution (px)</th><th>Poids Max</th><th>Textes & Spécificités</th></tr>
+            <tr><td>Promoted Post (Image)</td><td>1:1, 4:5, 16:9</td><td>1080 x 1080 / 1200 x 628</td><td>3 MB (JPG, PNG)</td><td>Titre du post : jusqu'à 300 caractères (pas de texte corporel).</td></tr>
+            <tr><td>Promoted Video</td><td>1:1, 4:5, 16:9</td><td>1080 x 1080 / 1080 x 1350</td><td>1 GB (MP4, MOV)</td><td>Durée : jusqu'à 15 minutes. Titre : 300 car.</td></tr>
+            <tr><td>Carousel Ad</td><td>1:1 ou 16:9</td><td>1080 x 1080 / 1200 x 628</td><td>20 MB par image</td><td>2 à 6 images.</td></tr>
+        </table>
+    </div>
+
+    <div id="X" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> La durée de vie d'un post sur X est très courte. L'attention est axée sur l'actualité et la tech. Le texte est aussi important, voire plus, que l'image.</div>
+        <table>
+            <tr><th>Format Ads</th><th>Ratio</th><th>Résolution (px)</th><th>Poids Max</th><th>Textes</th></tr>
+            <tr><td>Image Ad</td><td>1.91:1 ou 1:1</td><td>1200 x 628 ou 1200 x 1200</td><td>5 MB</td><td>Texte du post : 280 caractères (liens inclus).</td></tr>
+            <tr><td>Video Ad</td><td>16:9 ou 1:1</td><td>1920 x 1080 ou 1200 x 1200</td><td>1 GB</td><td>Durée reco : < 15s (max 2 minutes et 20s en standard).</td></tr>
+            <tr><td>Carousel</td><td>1.91:1 ou 1:1</td><td>Idem Image Ad</td><td>5 MB par image</td><td>2 à 6 images ou vidéos.</td></tr>
+        </table>
+    </div>
+
+    <div id="BeReal" class="tabcontent">
+        <div class="expert-tip"><strong>Tips de l'expert :</strong> L'écosystème publicitaire de BeReal ("RealBrands") est atypique et repose sur l'authenticité stricte. On ne parle pas de "Dark Posts" ultra-produits ici. La publicité doit ressembler à un BeReal organique avec la double caméra.</div>
+        <table>
+            <tr><th>Format Ads</th><th>Ratio</th><th>Résolution (px)</th><th>Poids & Format</th><th>Spécificités Créatives</th></tr>
+            <tr><td>RealBrands / Native Ad</td><td>9:16</td><td>Standard Mobile (approx 1080 x 1920)</td><td>-</td><td>Nécessite la prise de vue avec caméra frontale ET arrière.</td></tr>
+            <tr><td>Contraintes</td><td>N/A</td><td>N/A</td><td>N/A</td><td>Pas de filtres, pas de montages complexes. Doit respecter les codes de la spontanéité. Image statique ou vidéo très courte.</td></tr>
+        </table>
+    </div>
+
+    <script>
+        function openPlatform(evt, platformName) {
+            var i, tabcontent, tablinks;
+            
+            // Masquer tout le contenu des onglets
+            tabcontent = document.getElementsByClassName("tabcontent");
+            for (i = 0; i < tabcontent.length; i++) {
+                tabcontent[i].style.display = "none";
+            }
+
+            // Retirer la classe 'active' de tous les boutons
+            tablinks = document.getElementsByClassName("tablinks");
+            for (i = 0; i < tablinks.length; i++) {
+                tablinks[i].className = tablinks[i].className.replace(" active", "");
+            }
+
+            // Afficher le contenu de l'onglet cliqué et ajouter la classe 'active'
+            document.getElementById(platformName).style.display = "block";
+            evt.currentTarget.className += " active";
+        }
+
+        // Simuler le clic sur le premier onglet à l'ouverture de la page
+        document.getElementById("defaultOpen").click();
+    </script>
+
+</body>
+</html>
